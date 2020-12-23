@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+        <title>Welcome!</title>
+        <link rel="icon" href="smile.png">
+
+        <style>
+
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 100vh;
+                color: white;
+            }
+
+            #time {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 8rem;
+            }
+
+            h1 {
+                font-family: 'Great Vibes', cursive;
+                font-size: 4rem;
+                margin-bottom: 3rem;
+            }
+
+            #quote {
+                font-family: 'Montserrat', sans-serif;
+                opacity: 0.75;
+                margin-bottom: 5rem;
+            }
+
+            #moodselect {
+                font-family: 'Montserrat', sans-serif;
+                opacity: 0.75;
+            }
+
+            #mood {
+                font-family: 'Montserrat', sans-serif;
+                opacity: 0.75;
+            }
+
+            #moodMessage {
+                font-family: 'Montserrat', sans-serif;
+                opacity: 0.75;
+            }
+
+            @media(max-width: 720px) {
+                #time {
+                    font-size: 5rem;
+                }
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                #quote {
+                    font-size: 1rem;
+                }
+
+                #moodselect {
+                    font-size: 1rem;
+                }
+
+                #mood {
+                    font-size: 1rem;
+                }
+
+                #moodMessage {
+                    font-size: 1rem;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <time id="time"></time>
+        <h1> 
+            <span id="greeting"></span>
+            <span id="name" contenteditable="true" spellcheck="false"></span>
+        </h1>
+
+        <h2 id="quote"></h2>
+
+        <div id="moodDiv">
+            <h3 id="moodselect">How are you today?</h3><br>
+            <span><input onclick="mood()" type="radio" id="great" name="feeling" value="great">
+            <label for="great" id="mood">Great!</label></span>
+            <span><input onclick="mood()" type="radio" id="fine" name="feeling" value="fine">
+            <label for="fine" id="mood">Not bad</label></span>
+            <span><input onclick="mood()" type="radio" id="okay" name="feeling" value="okay">
+            <label for="okay" id="mood">I'm okay</label></span>
+            <span><input onclick="mood()" type="radio" id="bad" name="feeling" value="bad">
+            <label for="bad" id="mood">Not so well</label></span>
+            <span><input onclick="mood()" type="radio" id="poor" name="feeling" value="poor">
+            <label for="poor" id="mood">Awful!</label></span>
+        </div>
+
+        <h3 id="moodMessage"></h3>
+
+        <script src="main.js"></script>
+        
+    </body>
+
+</html>
